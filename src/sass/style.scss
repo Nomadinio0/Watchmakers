@@ -1,0 +1,154 @@
+@import './colors';
+@import './animations';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 400;
+	color: white;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	align-items: center;
+	margin: auto;
+}
+
+//HEADER
+
+header {
+	position: relative;
+	height: 60vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/dist/img/header_1920.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+
+	nav {
+		padding: 2% 5%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		li {
+			display: inline-block;
+
+			a {
+				position: relative;
+				margin: 0 20px;
+				padding: 0 10px;
+				font-size: 1.6rem;
+				font-weight: bold;
+
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 3px;
+					bottom: -5px;
+					left: 0;
+					background-color: $orange;
+					transform: scaleX(0);
+					transition: transform 0.3s ease;
+				}
+
+				&:hover::after {
+					transform: scaleX(1);
+				}
+
+				&:last-child {
+					color: $lblue;
+				}
+			}
+		}
+	}
+
+	.header-text {
+		position: absolute;
+		width: 80%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		h1 {
+			padding: 15px;
+			font-size: 4.8rem;
+			text-align: center;
+			text-transform: uppercase;
+
+			span {
+				font-size: 4.8rem;
+				color: $orange;
+			}
+		}
+
+		p {
+			// padding: 10px;
+			font-size: 2.4rem;
+			text-align: center;
+		}
+	}
+}
+
+// html {
+// 	font-size: 62.5%;
+// 	scroll-behavior: smooth;
+// }
+
+// .wrapper {
+// 	margin: 0 auto;
+// 	width: 100%;
+// 	max-width: 1200px;
+// }
+
+// body {
+// 	font-family: 'Montserrat', sans-serif;
+// 	height: 100vh;
+
+// 	nav {
+// 		padding: 30px;
+// 		background-color: $grey;
+// 		text-align: center;
+// 	}
+
+// 	.hero-img {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 50vh;
+// 		background-size: cover;
+// 		background-position: center;
+// 		background-repeat: no-repeat;
+// 		background-image: url('/dist/img/header_640.jpg');
+// 	}
+
+// 	.hero-text {
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+// 		text-transform: uppercase;
+// 		font-size: 2.4rem;
+// 		color: $grey;
+// 	}
+
+// 	.hero-bg {
+// 		width: 100%;
+// 		height: 100%;
+// 		background-color: rgba(0, 0, 0, 0.4);
+// 	}
+// }
