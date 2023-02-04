@@ -9,31 +9,52 @@
     <link rel="stylesheet" href="./dist/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/c54bc96960.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <!-- <button class="burger-icon"><i class="fa-solid fa-bars"></i></button> -->
-            <ul>
-                <li>
-                    <a href="#aboutus">O nas</a>
-                    <a href="#offers">Galeria</a>
-                    <a href="#services">Cennik</a>
-                    <a href="#contact">Kontakt</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            <h1>Witamy na <span>watchmakers</span>!</h1>
-            <p>Najtańsze usługi zegarmistrzowskie w okolicy!</p>
+        <nav class="navbar">
+    <button class="burger-btn">
+        <div class="burger-btn__box">
+            <div class="burger-btn__bars"></div>
+        </div>
+    </button>
+    <div class="nav-items">
+        <a href="#aboutus">O nas</a>
+        <a href="#offers">Galeria</a>
+        <a href="#services">Cennik</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+
+</nav>
+        <div class="header__box">
+            <h1 class="header__box-heading">Witamy na stronie <span>watchmakers</span>!</h1>
+            <p class="header__box-text">Najtańsze usługi zegarmistrzowskie w okolicy!</p>
         </div>
     </header>
-
-    <main></main>
-    <footer></footer>
+    <main>
+        <section class="aboutus">
+            <div class="wrapper">
+                <h2 class="section-heading">O nas</h2>
+                <div class="aboutus__box">
+                    <div class="aboutus__box-img">
+                        <img src="/dist/img/watchmaker-6861400_640.jpg" alt="" class="aboutus__img">
+                    </div>
+                    <div class="aboutus__box-text">
+                        <p class="aboutus__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quam nulla
+                            quos voluptatem consequatur voluptatibus quisquam eum odit! Natus modi mollitia nam vero
+                            fugiat corrupti, ducimus facilis incidunt inventore cum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy <span class="footer__year"></span> Watchmakers</p>
+    </footer>
     <script src="/dist/js/main.min.js"></script>
 </body>
 

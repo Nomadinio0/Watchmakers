@@ -7,11 +7,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+html {
 	font-size: 62.5%;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
 }
 
 a {
@@ -20,33 +24,78 @@ a {
 	color: white;
 }
 
-.row {
-	display: flex;
-	justify-content: space-between;
-	width: 80%;
-	align-items: center;
-	margin: auto;
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
 }
 
 //HEADER
 
 header {
 	position: relative;
-	height: 60vh;
+	height: 100vh;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/dist/img/header_1920.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
 
-	nav {
-		padding: 2% 5%;
+	.navbar {
+		height: 10%;
+		padding: 20px 10px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
 
-		li {
-			display: inline-block;
+		.burger-btn {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			padding: 1em;
+			background: none;
+			border: 1px solid transparent;
+			cursor: pointer;
+			z-index: 1000;
+
+			&:focus {
+				outline: none;
+				border: 1px solid rgba(255, 255, 255, 0.5);
+				border-radius: 10px;
+			}
+
+			&__box {
+				position: relative;
+				width: 40px;
+				height: 30px;
+			}
+
+			&__bars,
+			&__bars::after,
+			&__bars::before {
+				content: '';
+				position: absolute;
+				right: 0;
+				height: 3px;
+				background-color: white;
+				width: 100%;
+				transition: width 0.3s;
+			}
+
+			&__bars {
+				&::after {
+					top: 13px;
+				}
+
+				&::before {
+					top: 27px;
+				}
+			}
+		}
+
+		.nav-items {
+			position: fixed;
+			display: none;
 
 			a {
 				position: relative;
@@ -78,77 +127,159 @@ header {
 		}
 	}
 
-	.header-text {
+	.header__box {
 		position: absolute;
 		width: 80%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 
-		h1 {
+		&-heading {
 			padding: 15px;
-			font-size: 4.8rem;
+			font-size: 2rem;
 			text-align: center;
 			text-transform: uppercase;
 
 			span {
-				font-size: 4.8rem;
+				font-size: 2.4rem;
 				color: $orange;
 			}
 		}
 
-		p {
+		&-text {
 			// padding: 10px;
-			font-size: 2.4rem;
+			font-size: 1.6rem;
 			text-align: center;
 		}
 	}
 }
 
-// html {
-// 	font-size: 62.5%;
-// 	scroll-behavior: smooth;
-// }
+//O NAS
+.section-heading {
+	padding: 1em;
+	font-size: 2.8rem;
+	text-align: center;
+}
 
-// .wrapper {
-// 	margin: 0 auto;
-// 	width: 100%;
-// 	max-width: 1200px;
-// }
+.aboutus {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 0 2em;
+	}
 
-// body {
-// 	font-family: 'Montserrat', sans-serif;
-// 	height: 100vh;
+	&__img {
+		width: 100%;
+	}
 
-// 	nav {
-// 		padding: 30px;
-// 		background-color: $grey;
-// 		text-align: center;
-// 	}
+	&__text {
+		margin: 2em 1em;
+		font-size: 1.6rem;
+		text-align: justify;
+	}
+}
 
-// 	.hero-img {
-// 		position: absolute;
-// 		width: 100%;
-// 		height: 50vh;
-// 		background-size: cover;
-// 		background-position: center;
-// 		background-repeat: no-repeat;
-// 		background-image: url('/dist/img/header_640.jpg');
-// 	}
+//FOOTER
 
-// 	.hero-text {
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		text-transform: uppercase;
-// 		font-size: 2.4rem;
-// 		color: $grey;
-// 	}
+.footer {
+	padding: 10px;
+	border-top: solid 1px black;
 
-// 	.hero-bg {
-// 		width: 100%;
-// 		height: 100%;
-// 		background-color: rgba(0, 0, 0, 0.4);
-// 	}
-// }
+	p,
+	span {
+		font-size: 1.8rem;
+		text-align: center;
+	}
+}
+
+//-------------------MEDIA
+
+@media (min-width: 576px) {
+	header {
+		.header__box {
+			&-heading {
+				font-size: 2.4rem;
+
+				span {
+					font-size: 3.6rem;
+				}
+			}
+
+			&-text {
+				// padding: 10px;
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.section-heading {
+		font-size: 3.6rem;
+	}
+
+	.aboutus {
+		&__text {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		.header__box {
+			&-heading {
+				font-size: 3.6rem;
+
+				span {
+					font-size: 4.8rem;
+				}
+			}
+
+			&-text {
+				// padding: 10px;
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	.aboutus {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-img {
+				margin: 1em 0;
+				width: 50%;
+			}
+
+			&-text {
+				width: 50%;
+			}
+		}
+
+		&__text {
+			margin: 0 1em;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		.header__box {
+			&-heading {
+				font-size: 4rem;
+
+				span {
+					font-size: 5.4rem;
+				}
+			}
+		}
+		.burger-btn {
+			display: none;
+		}
+		.navbar {
+			.nav-items {
+				display: inline-block;
+			}
+		}
+	}
+}
