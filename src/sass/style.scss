@@ -167,7 +167,16 @@ header {
 	&__box {
 		display: flex;
 		flex-direction: column;
-		margin: 0 2em;
+		// margin: 2rem 3rem;
+
+		&-img {
+			margin: 0 4rem 4rem 4rem;
+			height: 250px;
+			background-image: url('/dist/img/watchmaker-6861400_640.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	}
 
 	&__img {
@@ -176,8 +185,8 @@ header {
 	}
 
 	&__text {
-		margin: 1em 1em;
-		font-size: 1.8rem;
+		margin: 2rem 3rem;
+		font-size: 1.6rem;
 		text-align: justify;
 	}
 }
@@ -249,8 +258,14 @@ header {
 	}
 
 	.aboutus {
+		&__box {
+			&-img {
+				margin: 0 4rem 4rem 4rem;
+			}
+		}
+
 		&__text {
-			font-size: 2.4rem;
+			font-size: 2rem;
 		}
 
 		&__img {
@@ -278,18 +293,19 @@ header {
 			justify-content: space-between;
 
 			&-img {
-				margin-bottom: 1.6rem;
+				margin: 2rem 2rem;
+				height: auto;
 				width: 55%;
 			}
 
 			&-text {
-				margin: 1rem 1rem;
 				width: 45%;
 			}
 		}
 
 		&__text {
-			font-size: 1.6rem;
+			margin: 2rem 3rem;
+			font-size: 2.2rem;
 		}
 	}
 }
@@ -313,18 +329,19 @@ header {
 
 	.aboutus {
 		&__box {
+			margin: 2rem;
 			&-img {
-				width: 55%;
+				background-image: url('/dist/img/watchmaker-6861400_1920.jpg');
+				background-size: cover;
 			}
 
 			&-text {
-				margin: 2rem 1rem;
 				width: 45%;
 			}
 		}
 
 		&__text {
-			font-size: 2rem;
+			font-size: 2.4rem;
 		}
 	}
 }
