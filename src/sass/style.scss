@@ -125,7 +125,8 @@ header {
 	position: relative;
 	height: 50vh;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/dist/img/header_1920.jpg');
-	background-position: center;
+	background-position: bottom;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
@@ -149,7 +150,30 @@ header {
 		}
 
 		&-text {
-			// padding: 10px;
+			font-size: 2rem;
+			text-align: center;
+		}
+	}
+
+	.header__box-bg {
+		position: absolute;
+		width: 80%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		&-heading {
+			padding: 15px;
+			font-size: 3rem;
+			text-align: center;
+			text-transform: uppercase;
+
+			span {
+				color: $orange;
+			}
+		}
+
+		&-text {
 			font-size: 2rem;
 			text-align: center;
 		}
@@ -158,7 +182,7 @@ header {
 
 //ABOUTUS
 .section-heading {
-	padding-top: 3rem;
+	padding-top: 4rem;
 	font-size: 2.8rem;
 	text-align: center;
 }
@@ -172,11 +196,19 @@ header {
 
 		&-img {
 			margin-top: 3rem;
-			height: 250px;
-			background-image: url('/dist/img/watchmaker-6861400_640.jpg');
+			height: 350px;
 			background-size: cover;
 			background-repeat: no-repeat;
+		}
+
+		.one {
+			background-image: url('/dist/img/watchmaker-6861400_640.jpg');
 			background-position: center;
+		}
+
+		.two {
+			background-image: url('/dist/img/couple-g58311e225_640.jpg');
+			background-position: top;
 		}
 	}
 
@@ -186,16 +218,19 @@ header {
 	}
 }
 
+.history {
+	background-color: $grey;
+}
+
 //GALLERY
-.gallery {
+.gallery__box {
 	margin: 0 3rem 3rem 3rem;
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	// overflow: hidden;
-	gap: 10px;
+	gap: 50px;
 
 	h2 {
-		padding-bottom: 3rem;
 		grid-column: 1/2;
 		grid-row: 1/2;
 	}
@@ -252,7 +287,6 @@ header {
 		width: 100%;
 		height: 20vh;
 		object-fit: cover;
-		cursor: pointer;
 	}
 }
 
@@ -261,7 +295,8 @@ header {
 	position: sticky;
 	top: 100%;
 	padding: 10px;
-	border-top: solid 1px black;
+	background-color: black;
+	color: white;
 
 	p,
 	span {
@@ -290,12 +325,20 @@ header {
 	}
 
 	.aboutus {
+		&__box {
+			.two {
+				height: 500px;
+				background-image: url('/dist/img/couple-g58311e225_640.jpg');
+				background-position: 0% 10%;
+			}
+		}
+
 		&__text {
 			font-size: 2rem;
 		}
 	}
 
-	.gallery {
+	.gallery__box {
 		&-img {
 			height: 30vh;
 		}
@@ -336,7 +379,7 @@ header {
 		}
 	}
 
-	.gallery {
+	.gallery__box {
 		grid-template-columns: repeat(2, 1fr);
 
 		h2 {
