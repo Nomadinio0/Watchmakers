@@ -180,33 +180,33 @@ header {
 	}
 }
 
-//ABOUTUS
 .section-heading {
-	padding-top: 4rem;
-	font-size: 2.8rem;
+	padding: 2rem;
+	font-size: 3rem;
 	text-align: center;
 }
 
+//ABOUTUS
 .aboutus {
 	&__box {
-		padding: 3rem;
+		padding: 0 3rem 3rem 3rem;
 		display: flex;
 		flex-direction: column;
-		// margin: 2rem 3rem;
 
 		&-img {
-			margin-top: 3rem;
-			height: 350px;
+			height: 300px;
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
 
 		.one {
+			margin-top: 3rem;
 			background-image: url('/dist/img/watchmaker-6861400_640.jpg');
 			background-position: center;
 		}
 
 		.two {
+			margin-bottom: 3rem;
 			background-image: url('/dist/img/couple-g58311e225_640.jpg');
 			background-position: top;
 		}
@@ -219,7 +219,7 @@ header {
 }
 
 .history {
-	background-color: $grey;
+	background-color: $lgray;
 }
 
 //GALLERY
@@ -227,8 +227,6 @@ header {
 	margin: 0 3rem 3rem 3rem;
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	// overflow: hidden;
-	gap: 50px;
 
 	h2 {
 		grid-column: 1/2;
@@ -290,6 +288,40 @@ header {
 	}
 }
 
+//OFFERS
+.offers__box {
+	&-table {
+		border-collapse: collapse;
+		margin: 25px auto;
+		min-width: 300px;
+		width: 60%;
+		border-radius: 15px;
+		overflow: hidden;
+		font-weight: bold;
+
+		thead tr {
+			background-color: $dblue;
+			color: white;
+			text-align: left;
+		}
+
+		tbody tr {
+			background-color: $lgray;
+			font-size: 0.9em;
+			color: $dblue;
+
+			&:nth-of-type(even) {
+				background-color: $gray;
+			}
+		}
+
+		th,
+		td {
+			padding: 15px 20px;
+		}
+	}
+}
+
 //FOOTER
 .footer {
 	position: sticky;
@@ -300,7 +332,7 @@ header {
 
 	p,
 	span {
-		font-size: 1.8rem;
+		font-size: 1rem;
 		text-align: center;
 	}
 }
@@ -327,7 +359,7 @@ header {
 	.aboutus {
 		&__box {
 			.two {
-				height: 500px;
+				// height: 500px;
 				background-image: url('/dist/img/couple-g58311e225_640.jpg');
 				background-position: 0% 10%;
 			}
@@ -364,13 +396,17 @@ header {
 			justify-content: space-between;
 
 			&-img {
-				margin-top: 0;
 				height: auto;
-				width: 50%;
+				width: 45%;
 			}
 
 			&-text {
-				width: 45%;
+				width: 50%;
+			}
+
+			.one,
+			.two {
+				margin: 0;
 			}
 		}
 
@@ -390,6 +426,10 @@ header {
 			height: 40vh;
 		}
 	}
+
+	.section-heading {
+		font-size: 4rem;
+	}
 }
 
 @media (min-width: 992px) {
@@ -399,10 +439,6 @@ header {
 				font-size: 4rem;
 			}
 		}
-	}
-
-	.section-heading {
-		font-size: 4.4rem;
 	}
 
 	.burger-btn {
@@ -417,15 +453,14 @@ header {
 
 	.aboutus {
 		&__box {
-			// margin: 2rem;
 			&-img {
-				width: 50%;
+				width: 40%;
 				background-image: url('/dist/img/watchmaker-6861400_1920.jpg');
 				background-size: cover;
 			}
 
 			&-text {
-				width: 45%;
+				width: 55%;
 			}
 		}
 
