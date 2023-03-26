@@ -271,7 +271,7 @@ a {
 		&__table {
 			border-collapse: collapse;
 			margin: 25px auto;
-			min-width: 300px;
+			min-width: 280px;
 			width: 60%;
 			border-radius: 15px;
 			overflow: hidden;
@@ -301,23 +301,210 @@ a {
 	}
 
 	.auctions {
+		h3 {
+			margin-bottom: 20px;
+			text-align: center;
+		}
 		&__cards {
 			display: flex;
-			flex-direction: column;
+			flex-wrap: wrap;
 			align-items: center;
-			justify-content: center;
+			justify-content: space-around;
 		}
 
 		&__card {
-			margin: 25px auto;
-			min-width: 300px;
-			width: 60%;
+			margin: 20px 10px;
+			min-width: 280px;
 			border-radius: 15px;
 			height: 400px;
-			background-color: red;
+			background-color: $gray;
+
+			&:nth-of-type(odd) {
+				background-color: $lgray;
+			}
+
+			&-img {
+				margin: 15px auto;
+				width: 250px;
+				height: 300px;
+				border-radius: 15px;
+				background-position: center;
+				background-size: cover;
+
+				&-one {
+					background-image: url('/dist/img/rolex-4807479_640.jpg');
+				}
+				&-two {
+					background-image: url('/dist/img/omega-1339860_640.jpg');
+				}
+				&-three {
+					background-image: url('/dist/img/seiko-7236240_640.jpg');
+				}
+			}
+
+			&-text {
+				margin: 0 auto;
+				border-radius: 5px;
+
+				p {
+					// font-size: 2rem;
+					text-align: center;
+					color: $dblue;
+					font-weight: bold;
+				}
+
+				.price {
+					font-size: 2.4rem;
+					text-transform: uppercase;
+				}
+			}
 		}
 	}
 }
+
+//CONTACT
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	&__info {
+		margin: 2rem auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		&__box {
+			position: relative;
+			margin-bottom: 2rem;
+			text-align: center;
+
+			i {
+				position: absolute;
+				top: 50%;
+				left: -10%;
+				transform: translate(-50%, -50%);
+			}
+
+			.title {
+				font-weight: bold;
+			}
+		}
+	}
+
+	&__form {
+		padding: 1.6rem 1.6rem;
+		width: 85%;
+		margin: 0 auto 20px;
+		background-color: $blue;
+		border-radius: 2rem;
+		color: $lgray;
+
+		&__text {
+			display: block;
+			margin-bottom: 1.6rem;
+			text-align: center;
+		}
+
+		.input {
+			display: block;
+			margin-bottom: 0.5rem;
+			padding-left: 1rem;
+			width: 100%;
+			height: 30px;
+			border: none;
+			border-radius: 1rem;
+
+			&__area {
+				padding-top: 1rem;
+				height: 150px;
+				resize: none;
+			}
+		}
+
+		&__btn {
+			width: 100px;
+			height: 30px;
+			margin-top: 1rem;
+			background-color: $lgray;
+			color: $dblue;
+			font-weight: bold;
+			text-transform: uppercase;
+			border: none;
+			border-radius: 10px;
+		}
+	}
+}
+
+// .contact {
+// 	display: flex;
+// 	margin-top: 100px;
+// 	// flex-direction: row;
+// 	justify-content: space-around;
+
+// 	&__info {
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: space-around;
+// 		&__box {
+// 			position: relative;
+// 			font-size: 2rem;
+
+// 			i {
+// 				position: absolute;
+// 				top: 10%;
+// 				left: -15%;
+// 			}
+
+// 			.title {
+// 				font-weight: bold;
+// 			}
+// 		}
+// 	}
+
+// 	&__form {
+// 		padding: 30px 50px;
+// 		height: 450px;
+// 		width: 50%;
+// 		background-color: $blue;
+// 		border-radius: 30px;
+// 		color: $lgray;
+
+// 		&__text {
+// 			display: block;
+// 			margin-bottom: 10px;
+// 			font-size: 2rem;
+// 		}
+
+// 		.input {
+// 			display: block;
+// 			margin-bottom: 10px;
+// 			padding-left: 15px;
+// 			width: 100%;
+// 			height: 30px;
+// 			border: none;
+// 			border-radius: 10px;
+
+// 			&__area {
+// 				padding-top: 15px;
+// 				height: 150px;
+// 				resize: none;
+// 			}
+// 		}
+
+// 		&__btn {
+// 			width: 100px;
+// 			height: 30px;
+// 			margin-top: 10px;
+// 			background-color: $lgray;
+// 			color: $dblue;
+// 			font-weight: bold;
+// 			text-transform: uppercase;
+// 			border: none;
+// 			border-radius: 10px;
+// 		}
+// 	}
+// }
 
 //FOOTER
 .footer {
@@ -375,6 +562,25 @@ a {
 			height: 30vh;
 		}
 	}
+
+	.contact {
+		&__info__box {
+			font-size: 1.8rem;
+		}
+
+		&__form {
+			width: 70%;
+			border-radius: 3rem;
+
+			&__text {
+				font-size: 1.8rem;
+			}
+
+			.input {
+				padding: 1.6rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -427,6 +633,20 @@ a {
 	.section__heading {
 		font-size: 4rem;
 	}
+
+	.contact {
+		&__info__box {
+			font-size: 2rem;
+		}
+
+		&__form {
+			width: 60%;
+
+			&__text {
+				font-size: 2rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -463,5 +683,28 @@ a {
 
 	.section__heading {
 		padding: 3.6rem;
+	}
+
+	.contact {
+		margin-top: 4rem;
+		padding: 0 5rem;
+		flex-direction: row;
+		// justify-content: center;
+
+		&__info {
+			margin: 0;
+
+			&__box {
+				font-size: 2rem;
+			}
+		}
+
+		&__form {
+			margin: 0;
+			width: 50%;
+			&__text {
+				font-size: 2rem;
+			}
+		}
 	}
 }

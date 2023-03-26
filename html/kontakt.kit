@@ -11,11 +11,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c54bc96960.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- @include 'nav.kit' -->
+    <section class="contact wrapper">
+        <div class="contact__info">
+            <div class="contact__info__box">
+                <i class="fa-solid fa-map-location"></i>
+                <p class="title">Adres</p>
+                <p>Watchmakers sp. z o.o.</p>
+                <p>ul. Krakowska 5</p>
+                <p>40-092 Katowice</p>
+            </div>
+            <div class="contact__info__box">
+                <i class="fa-solid fa-phone"></i>
+                <p class="title">Telefon</p>
+                <p>+48 123 456 789</p>
+            </div>
+            <div class="contact__info__box">
+                <i class="fa-solid fa-envelope"></i>
+                <p class="title">Email</p>
+                <p>kontakt@watchmakers.pl</p>
+            </div>
+        </div>
+        <div class="contact__form">
+            <form action="">
+                <p class="contact__form__text">Chcesz zadać pytanie? Skorzystaj z formularza!</p>
+                <input type="text" class="input" placeholder="Imię i nazwisko">
+                <input type="text" class="input" placeholder="Temat">
+                <input type="email" class="input" placeholder="Adres mailowy">
+                <textarea type="text" class="input input__area" cols="30" rows="10"></textarea>
+                <button class="contact__form__btn">Wyślij</button>
+            </form>
+        </div>
+    </section>
     <!-- @include 'footer.kit' -->
+
     <script src="/dist/js/main.min.js"></script>
 </body>
 
