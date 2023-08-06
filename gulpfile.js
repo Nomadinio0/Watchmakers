@@ -1,4 +1,5 @@
 const { src, dest, series, parallel, watch } = require('gulp')
+const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 const cssnano = require('gulp-cssnano')
 const autoprefixer = require('gulp-autoprefixer')
@@ -10,6 +11,7 @@ const kit = require('gulp-kit')
 const sourcemaps = require('gulp-sourcemaps')
 const clean = require('gulp-clean')
 const browserSync = require('browser-sync').create()
+const ghPages = require('gulp-gh-pages')
 const reload = browserSync.reload
 
 const paths = {
@@ -88,6 +90,10 @@ function watchChanges(done) {
 	watch(paths.img, imgConvert).on('change', reload)
 	done()
 }
+
+gulp.task('deploy', function () {
+	return gulp.src('./dist/**/*').pipe(ghPages())
+})
 
 const mainFunctions = parallel(handleKits, sassCompiler, jsCompiler, imgConvert)
 exports.cleaning = cleaning
