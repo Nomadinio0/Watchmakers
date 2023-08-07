@@ -124,7 +124,7 @@ a {
 .header {
 	position: relative;
 	height: 50vh;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('dist/img/header_1920.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/dist/img/header_1920.jpg');
 	background-position: bottom;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -171,13 +171,13 @@ a {
 
 		.one {
 			margin-top: 3rem;
-			background-image: url('dist/img/watchmaker-6861400_640.jpg');
+			background-image: url('/dist/img/watchmaker-6861400_640.jpg');
 			background-position: center;
 		}
 
 		.two {
 			margin-bottom: 3rem;
-			background-image: url('dist/img/couple-g58311e225_640.jpg');
+			background-image: url('/dist/img/couple-g58311e225_640.jpg');
 			background-position: top;
 		}
 	}
@@ -211,49 +211,49 @@ a {
 	}
 
 	.one {
-		background-image: url('dist/img/omega-1339860_640.jpg');
+		background-image: url('/dist/img/omega-1339860_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
 	.two {
-		background-image: url('dist/img/rolex-4807479_640.jpg');
+		background-image: url('/dist/img/rolex-4807479_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
 	.three {
-		background-image: url('dist/img/seiko-7236240_640.jpg');
+		background-image: url('/dist/img/seiko-7236240_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
 	.four {
-		background-image: url('dist/img/wristwatch-6409941_640.jpg');
+		background-image: url('/dist/img/wristwatch-6409941_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
 	.five {
-		background-image: url('dist/img/rolex_640.jpg');
+		background-image: url('/dist/img/rolex_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
 	.six {
-		background-image: url('dist/img/time-3091031_640.jpg');
+		background-image: url('/dist/img/time-3091031_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
 	.seven {
-		background-image: url('dist/img/watch1_640.jpg');
+		background-image: url('/dist/img/watch1_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
 
 	.eight {
-		background-image: url('dist/img/citizen_640.jpg');
+		background-image: url('/dist/img/citizen_640.jpg');
 		background-size: cover;
 		background-position: center;
 	}
@@ -332,13 +332,13 @@ a {
 				background-size: cover;
 
 				&-one {
-					background-image: url('dist/img/rolex-4807479_640.jpg');
+					background-image: url('/dist/img/rolex-4807479_640.jpg');
 				}
 				&-two {
-					background-image: url('dist/img/omega-1339860_640.jpg');
+					background-image: url('/dist/img/omega-1339860_640.jpg');
 				}
 				&-three {
-					background-image: url('dist/img/seiko-7236240_640.jpg');
+					background-image: url('/dist/img/seiko-7236240_640.jpg');
 				}
 			}
 
@@ -508,7 +508,7 @@ a {
 	.aboutus {
 		&__box {
 			.two {
-				background-image: url('dist/img/couple-g58311e225_640.jpg');
+				background-image: url('/dist/img/couple-g58311e225_640.jpg');
 				background-position: 0% 10%;
 			}
 		}
@@ -681,7 +681,7 @@ a {
 		&__img {
 			height: 400px;
 			width: 60%;
-			background-image: url('dist/img/watchmaker-6861400_1920.jpg');
+			background-image: url('/dist/img/watchmaker-6861400_1920.jpg');
 			background-size: cover;
 		}
 		&__text {
