@@ -92,11 +92,7 @@ function watchChanges(done) {
 }
 
 gulp.task('deploy', function () {
-	return gulp.src('./dist/**/*').pipe(
-		deploy({
-			branch: 'main',
-		})
-	)
+	return gulp.src('./dist/**/*').pipe(ghPages())
 })
 
 const mainFunctions = parallel(handleKits, sassCompiler, jsCompiler, imgConvert)
