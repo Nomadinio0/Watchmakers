@@ -98,4 +98,4 @@ gulp.task('deploy', function () {
 const mainFunctions = parallel(handleKits, sassCompiler, jsCompiler, imgConvert)
 exports.cleaning = cleaning
 exports.default = series(mainFunctions, browserSyncOn, watchChanges)
-exports.build = series(mainFunctions, browserSyncOn, watchChanges)
+exports.build = series(mainFunctions)
